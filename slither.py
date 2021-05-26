@@ -29,12 +29,16 @@ while not gameExit:
             if event.key == pygame.K_RIGHT:
                 lead_x_change = 10
 
+        if event.type == pygame.KEYUP:
+            if event.key == pygame.K_LEFT or event.key == pygame.K_RIGHT:
+                lead_x_change = 0
+
     lead_x += lead_x_change
     gameDisplay.fill(white)
     pygame.draw.rect(gameDisplay, black, [lead_x, lead_y, 10, 10])
     pygame.display.update()
 
-    clock.tick(15)
+    clock.tick(30)
 
 pygame.quit()
 quit()
