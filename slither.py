@@ -116,7 +116,9 @@ def gameLoop():
         #             randAppleY = round(random.randrange(0, display_height-block_size))#/10.0)*10.0
         #             snakeLength += 1
 
-        if lead_x>randAppleX and lead_x<randAppleX+AppleThickness
+        if lead_x>randAppleX and lead_x<randAppleX+AppleThickness or lead_x+block_size>randAppleX and lead_x+block_size<randAppleX+AppleThickness:
+            if lead_y>randAppleY and lead_y<randAppleY+AppleThickness or lead_y+block_size>randAppleY and lead_y+block_size<randAppleY+AppleThickness:
+                print("x and y crossover!")
 
         clock.tick(FPS)
 
