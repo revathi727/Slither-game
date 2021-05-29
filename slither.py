@@ -16,6 +16,7 @@ gameDisplay = pygame.display.set_mode((display_width, display_height))
 pygame.display.set_caption('Slither')
 
 img = pygame.image.load('snakehead20px.png')
+appleimg = pygame.image.load('apple30px.png')
 
 clock = pygame.time.Clock()
 
@@ -84,6 +85,7 @@ def message_to_screen(msg, color, y_displace=0, size="small"):
 
 def gameLoop():
     global direction
+    direction = "right"
     gameExit = False
     gameOver = False
 
@@ -147,7 +149,8 @@ def gameLoop():
 
         AppleThickness = 30
 
-        pygame.draw.rect(gameDisplay, red, [randAppleX, randAppleY, AppleThickness, AppleThickness])
+        #pygame.draw.rect(gameDisplay, red, [randAppleX, randAppleY, AppleThickness, AppleThickness])
+        gameDisplay.blit(appleimg, (randAppleX, randAppleY))
         
         snakeHead = []
         snakeHead.append(lead_x)
