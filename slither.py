@@ -31,6 +31,17 @@ largefont = pygame.font.SysFont("comicsansms", 80)
 def game_intro():
     intro = True
     while intro:
+        for event in pygame.event.get():
+            if event.type == pygame.QUIT:
+                pygame.quit()
+                quit()
+            if event.type == pygame.KEYDOWN:
+                if event.key == pygame.K_c:
+                    intro = False
+                if event.key == pygame.K_q:
+                    pygame.quit()
+                    quit()
+
         gameDisplay.fill(white)
         message_to_screen("Welcome to Slither", green, -100, "large")
         message_to_screen("The objective of the game is to eat red apples", black, -30)
