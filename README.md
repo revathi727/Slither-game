@@ -36,7 +36,7 @@ To bootstrap pip from standard library
   
     python setup.py build
 
-## To create Installer*
+## To create *Installer*
 
   After creating setup.py file, open folder in cmd.
 
