@@ -1,6 +1,8 @@
 # Slither-game
 A snake game using pygame
 
+##Dowload Installer - [SlitherInstaller.msi](https://github.com/revathi727/Slither-game/blob/main/SlitherInstaller.msi)
+
 ### Install *python*
   To check if python is installed
   
